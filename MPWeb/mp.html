@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <title>MyPong</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" type="images/x-icon" href="file:///C:\Users\lgado\OneDrive\Desktop\Final Project\MPWeb\mypong.png" />
+    </head>
+    <body>
+        <div class="main">
+            <nav>
+                <div class="logo">
+                    <img src="file:///C:\Users\lgado\OneDrive\Desktop\Final Project\MPWeb\mypong.png">
+                </div>
+                <div class="nav-links">
+                    <ul>
+                        <li><a href="file:///C:\Users\lgado\OneDrive\Desktop\Final Project\MPWeb/mp.html">Home</a></li>
+                        <li><a href="file:///C:\Users\lgado\OneDrive\Desktop\Final Project\MPWeb/products.html">Products</a></li>
+                        <li><a href="file:///C:\Users\lgado\OneDrive\Desktop\Final Project\MPWeb/specs.html">Specification</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="information">
+                <img src="file:///C:\Users\lgado\OneDrive\Desktop\Final Project\MPWeb\cp2.png" class="mobile">
+                <div class="overlay"></div>
+                        
+                <div id="circle">
+                    <div class="feature one">
+                        <img src="file:///C:\Users\lgado\OneDrive\Desktop\Final Project\MPWeb\camera.png">
+                        <div>
+                            <h1>Camera</h1>
+                            <p>50MP Main Camera</p>
+                        </div>
+                    </div>
+                    <div class="feature two">
+                        <img src="file:///C:\Users\lgado\OneDrive\Desktop\Final Project\MPWeb\processor.png">
+                        <h1>Processor</h1>
+                        <p>Snapdragon 8 Gen2</p>
+                    </div>
+                    <div class="feature three">
+                        <img src="file:///C:\Users\lgado\OneDrive\Desktop\Final Project\MPWeb\display.png">
+                        <h1>Display</h1>
+                        <p>6.5" Super Amoled Display</p>
+                    </div>
+                    <div class="feature four">
+                        <img src="file:///C:\Users\lgado\OneDrive\Desktop\Final Project\MPWeb\battery.png">
+                        <h1>Battery</h1>
+                        <p>6000mAh, up to 2days</p>
+                    </div>
+                </div>
+            </div>
+            <div class="controls">
+                <img src="file:///C:\Users\lgado\OneDrive\Desktop\Final Project\MPWeb\arrow.png" id="Upbtn">
+                <h3>Features</h3>
+                <img src="file:///C:\Users\lgado\OneDrive\Desktop\Final Project\MPWeb\arrow.png" id="Downbtn">
+            </div>
+        </div>
+
+            <script>
+                var circle = document.getElementById("circle");
+                var Upbtn = document.getElementById("Upbtn");
+                var Downbtn = document.getElementById("Downbtn");
+
+                var rotateValue = circle.style.transform;
+                var rotateSum;
+
+                Upbtn.onclick = function()
+                {
+                    rotateSum = rotateValue + "rotate(-90deg)";
+                    circle.style.transform = rotateSum;
+                    rotateValue = rotateSum;
+                }
+                Downbtn.onclick = function()
+                {
+                    rotateSum = rotateValue + "rotate(90deg)";
+                    circle.style.transform = rotateSum;
+                    rotateValue = rotateSum;
+                }
+            </script>
+
+    </body>
+</html>
